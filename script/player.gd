@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED = 130.0
 const FRICTION = 5000
@@ -10,6 +10,7 @@ var balls: int = 0
 @onready var tap: AudioStreamPlayer2D = $tap
 @onready var tap_timer: Timer = $tap_timer
 func _physics_process(delta: float) -> void:
+	%GameManager.update_balls(balls)
 	if %GameManager.all_locked == true:
 		return
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")

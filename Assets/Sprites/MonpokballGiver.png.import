@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dogmkp07ywi0j"
-path="res://.godot/imported/monpokballanims.png-890885353c3e079c5cd2612caeca49a6.ctex"
+uid="uid://csffsy138diq3"
+path="res://.godot/imported/MonpokballGiver.png-744ba27f8bae41bcaca3d8ade8a036af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/monpokballanims.png"
-dest_files=["res://.godot/imported/monpokballanims.png-890885353c3e079c5cd2612caeca49a6.ctex"]
+source_file="res://Assets/Sprites/MonpokballGiver.png"
+dest_files=["res://.godot/imported/MonpokballGiver.png-744ba27f8bae41bcaca3d8ade8a036af.ctex"]
 
 [params]
 

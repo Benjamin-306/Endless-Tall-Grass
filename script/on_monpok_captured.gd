@@ -33,6 +33,8 @@ func setup(image, text, body):
 	$ColorRect/Monpok.texture = load(IMAGE)
 	if body.balls <= 0:
 		$ColorRect/CatchButton.disabled = true
+	else:
+		$ColorRect/CatchButton.disabled = false
 	
 func clean():
 	IMAGE = false

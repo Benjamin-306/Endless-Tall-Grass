@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cmfshvvasmq6w"]
+
+[ext_resource type="Texture2D" uid="uid://csffsy138diq3" path="res://Assets/Sprites/MonpokballGiver.png" id="1_8ko23"]
+[ext_resource type="Script" uid="uid://cnqx2fvm866n8" path="res://script/monpokball_giver.gd" id="1_g2bpf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2bpf"]
+size = Vector2(42, 42)
+
+[node name="MonpokballGiver" type="Area2D" unique_id=1360828205]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_g2bpf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=168624372]
+position = Vector2(13, 13)
+scale = Vector2(2.625, 2.625)
+texture = ExtResource("1_8ko23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1061869376]
+position = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_g2bpf")
+
+[node name="Timer" type="Timer" parent="." unique_id=1002218321]
+wait_time = 20.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

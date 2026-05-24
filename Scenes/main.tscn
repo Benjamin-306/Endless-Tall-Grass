@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://kby2icutldgx" path="res://Scenes/game_manager.gd" id="1_21xkr"]
 [ext_resource type="Script" uid="uid://xltgaoj6y8no" path="res://script/inventory.gd" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://c5laq2ns3o04k" path="res://Scenes/player.tscn" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://ly6vhfvc74q8" path="res://Assets/Sprites/monpokball.png" id="3_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://titfgcjosssa" path="res://Scenes/on_monpok_captured.tscn" id="3_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn_grassland.tscn" id="7_6bp64"]
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://co0ln7v7grc43" path="res://Assets/Sprites/InvetorySign.png" id="14_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
 size = Vector2(1920, 2960)
@@ -280,6 +282,38 @@ text = " Your inventory is full!"
 [node name="Timer" type="Timer" parent="GameManager/CanvasLayer/Inventory" unique_id=1487473109]
 wait_time = 2.0
 one_shot = true
+
+[node name="Balls" type="Control" parent="GameManager/CanvasLayer" unique_id=326966861]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Balls" unique_id=1474442706]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("3_h1bgf")
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Balls" unique_id=1299586483]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -71.0
+offset_top = -15.0
+offset_right = -31.0
+offset_bottom = 73.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+text = "0"
 
 [node name="OnMonpokCaptured" parent="GameManager" unique_id=405112698 instance=ExtResource("3_wsu2k")]
 visible = false
@@ -572,5 +606,8 @@ texture_normal = ExtResource("14_jkdf5")
 texture_pressed = ExtResource("14_jkdf5")
 shape = SubResource("CircleShape2D_wsu2k")
 action = "inventory"
+
+[node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
+position = Vector2(360, 34)
 
 [connection signal="timeout" from="GameManager/CanvasLayer/Inventory/Timer" to="GameManager/CanvasLayer/Inventory" method="_on_timer_timeout"]

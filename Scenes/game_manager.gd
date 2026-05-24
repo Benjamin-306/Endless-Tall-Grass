@@ -11,3 +11,7 @@ func _process(_delta: float) -> void:
 			$CanvasLayer/Inventory.hide()
 			
 	all_locked = $CanvasLayer/Inventory.is_visible_in_tree()
+
+func update_balls(balls):
+	balls = str(balls)
+	$CanvasLayer/Balls/Label.text = balls
