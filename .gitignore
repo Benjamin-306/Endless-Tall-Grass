@@ -1,3 +1,75 @@
-# Godot 4+ specific ignores
+# Godot-specific ignores
 .godot/
+.import/
+*.import
+export_presets.cfg
+debug.log
+
+# Mono / C# build artifacts
+.mono/
+obj/
+bin/
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.csproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.unityproj
+*.pidb
+*.booproj
+
+# Godot export output
+*.apk
+*.aab
+*.ipk
+*.x86
+*.x86_64
+*.arm64
+*.pck
+*.pdb
+*.dSYM
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+Icon?
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.orig
+*.backup
+*.log
+
+# VS Code workspace settings
+.vscode/
+
+# JetBrains Rider / IntelliJ
+.idea/
+*.iml
+
+# Other IDE files
+*.vscode
+
+# Android / export directories
 /android/
+
+# Misc
+*.class
+*.log
+
+# Ignore platform-specific Godot temporary cache
+.cache/
