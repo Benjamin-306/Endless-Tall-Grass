@@ -1,6 +1,6 @@
 @tool
 @icon("res://addons/virtual_joystick/virtual_joystick_icon.svg")
-class_name VirtualJoystick
+class_name CustomVirtualJoystick
 extends Control
 ## A customizable Virtual Joystick for mobile games.
 ##

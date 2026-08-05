@@ -12,7 +12,7 @@ config_version=5
 
 config/name="MonpokFirstSteps®"
 run/main_scene="uid://daigvy7a3x4jm"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.14117648, 0.73333335, 0.14117648, 1)
 boot_splash/use_filter=false
 boot_splash/image="uid://dvj2i5xw5dh8m"
