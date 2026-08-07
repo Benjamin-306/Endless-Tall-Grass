@@ -1,6 +1,6 @@
 extends Node
 
-@export var cell_size = 20
+@export var cell_size = int(20)
 
 @export var scene_1 = preload("res://Scenes/Monpok01.tscn")
 @export var scene_2 = preload("res://Scenes/Monpok02.tscn")

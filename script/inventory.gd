@@ -1,7 +1,7 @@
 extends Control
 
 var inventory = [null, null, null, null, null, null]
-var full = false
+var full = bool(false)
 	
 func add(TEXT, IMAGE):
 	full = false

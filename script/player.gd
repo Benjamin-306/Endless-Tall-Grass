@@ -1,10 +1,10 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 130.0
-const FRICTION = 5000
-const ACCELARATION = 600
-var balls: int = 0
+const SPEED = float(130.0)
+const FRICTION = int(5000)
+const ACCELARATION = int(600)
+var balls: int = int(0)
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var tap: AudioStreamPlayer2D = $tap

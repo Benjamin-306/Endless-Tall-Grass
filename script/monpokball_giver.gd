@@ -1,6 +1,6 @@
 extends Area2D
 
-var ball = true
+var ball = bool(true)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Timer.start()
