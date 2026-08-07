@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
-const IMAGE = "res://Assets/Sprites/Monpok_01.png"
-const TEXT = "Monpok1"
+@export var IMAGE : String
+@export var TEXT : String
 
 @onready var inventory = get_tree().root.find_child("Inventory", true, false)
 @onready var OnMonpokCaptured = get_tree().root.find_child("OnMonpokCaptured", true, false)

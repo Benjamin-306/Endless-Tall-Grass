@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csxfppky5ik01"]
 
-[ext_resource type="Script" uid="uid://bh0bosmqrfpn4" path="res://script/monpok_01.gd" id="1_5odka"]
+[ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_5odka"]
 [ext_resource type="Texture2D" uid="uid://b0vpur2sbqe5h" path="res://Assets/Sprites/Monpok_01.png" id="2_lurro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnwda"]
@@ -14,6 +14,8 @@ z_index = 9
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_5odka")
+IMAGE = "res://Assets/Sprites/Monpok_01.png"
+TEXT = "Monpok1"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1461861378]
 texture = ExtResource("2_lurro")
