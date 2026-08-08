@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c5laq2ns3o04k" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://ly6vhfvc74q8" path="res://Assets/Sprites/monpokball.png" id="3_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://titfgcjosssa" path="res://Scenes/on_monpok_captured.tscn" id="3_wsu2k"]
-[ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn_grassland.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn.tscn" id="7_6bp64"]
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
 [ext_resource type="AudioStream" uid="uid://dfan8gk04k1sk" path="res://Assets/sounds/Pallet Path Dreams(1).mp3" id="9_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]

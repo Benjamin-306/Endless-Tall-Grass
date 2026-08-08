@@ -2,31 +2,24 @@ extends Node
 
 @export var cell_size : int = int(20)
 
-@export var probability_1 : int
-@export var probability_2 : int
-@export var probability_3 : int
-@export var probability_4 : int
-@export var probability_5 : int
-@export var probability_6 : int
-@export var probability_7 : int
-@export var probability_8 : int
-@export var probability_9 : int
-@export var probability_10 : int
-
-@export var scene_1 = PackedScene
-@export var scene_2 = PackedScene
-@export var scene_3 = PackedScene
-@export var scene_4 : PackedScene
-@export var scene_5 : PackedScene
-@export var scene_6 : PackedScene
-@export var scene_7 : PackedScene
-@export var scene_8 : PackedScene
-@export var scene_9 : PackedScene
-@export var scene_10 : PackedScene
+@export var scenes : Array[PackedScene]
+@export var probabilities : Array[int]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("READY")
+	
+	# Validierung
+	if scenes.size() != probabilities.size():
+		push_error("Fehler: scenes.size() (%d) != probabilities.size() (%d)" % [scenes.size(), probabilities.size()])
+	
+	# Warnung wenn leere Einträge vorhanden sind
+	for i in range(scenes.size()):
+		if scenes[i] == null:
+			push_warning("Warnung: scenes[%d] ist null!" % i)
+		if probabilities[i] == 0:
+			push_warning("Warnung: probabilities[%d] ist 0!" % i)
+	
 	var area_size = $ColorRect.size
 	spawn_grid(area_size)
 	
@@ -43,17 +36,11 @@ func spawn_grid(area_size):
 			
 			var spawn_pos = start_pos + Vector2(x * cell_size, y * cell_size)
 			spawn_pos += Vector2(cell_size / 2.0, cell_size / 2.0)
-				
-				
 			
-			if roll < probability_8:
-				continue
-			elif roll < probability_9:
-				spawn_object(scene_3, spawn_pos)
-			elif roll < probability_10:
-				spawn_object(scene_2, spawn_pos)
-			else:
-				spawn_object(scene_1, spawn_pos)
+			for i in range(probabilities.size()):
+				if roll < probabilities[i]:
+					spawn_object(scenes[i], spawn_pos)
+					break
 				
 func spawn_object(scene:PackedScene, pos:Vector2):
 	print("SpawnObject")
