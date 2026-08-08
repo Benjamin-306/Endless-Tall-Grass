@@ -1,6 +1,22 @@
 [gd_scene format=3 uid="uid://c6qcbj2evfgq1"]
 
-[ext_resource type="Script" uid="uid://dliov8oyfdxny" path="res://script/monpok_spawn_grassland.gd" id="1_xqw6t"]
+[ext_resource type="Script" uid="uid://dliov8oyfdxny" path="res://script/monpok_spawn.gd" id="1_xqw6t"]
+[ext_resource type="PackedScene" uid="uid://csxfppky5ik01" path="res://Scenes/Monpok01.tscn" id="2_7r6gq"]
+[ext_resource type="PackedScene" uid="uid://b2kj25jq1rl3a" path="res://Scenes/Monpok03.tscn" id="2_gyw6f"]
+[ext_resource type="PackedScene" uid="uid://brgt63pxlitfb" path="res://Scenes/Monpok02.tscn" id="3_exk6n"]
 
 [node name="MonpokSpawnGrassland" type="Node" unique_id=1269393051]
 script = ExtResource("1_xqw6t")
+probability_1 = 90
+probability_2 = 91
+probability_3 = 92
+probability_4 = 93
+probability_5 = 94
+probability_6 = 95
+probability_7 = 96
+probability_8 = 97
+probability_9 = 98
+probability_10 = 99
+scene_1 = ExtResource("2_7r6gq")
+scene_2 = ExtResource("3_exk6n")
+scene_3 = ExtResource("2_gyw6f")

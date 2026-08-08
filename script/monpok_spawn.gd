@@ -1,10 +1,28 @@
 extends Node
 
-@export var cell_size = int(20)
+@export var cell_size : int = int(20)
 
-@export var scene_1 = preload("res://Scenes/Monpok01.tscn")
-@export var scene_2 = preload("res://Scenes/Monpok02.tscn")
-@export var scene_3 = preload("res://Scenes/Monpok03.tscn")
+@export var probability_1 : int
+@export var probability_2 : int
+@export var probability_3 : int
+@export var probability_4 : int
+@export var probability_5 : int
+@export var probability_6 : int
+@export var probability_7 : int
+@export var probability_8 : int
+@export var probability_9 : int
+@export var probability_10 : int
+
+@export var scene_1 = PackedScene
+@export var scene_2 = PackedScene
+@export var scene_3 = PackedScene
+@export var scene_4 : PackedScene
+@export var scene_5 : PackedScene
+@export var scene_6 : PackedScene
+@export var scene_7 : PackedScene
+@export var scene_8 : PackedScene
+@export var scene_9 : PackedScene
+@export var scene_10 : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,12 +43,14 @@ func spawn_grid(area_size):
 			
 			var spawn_pos = start_pos + Vector2(x * cell_size, y * cell_size)
 			spawn_pos += Vector2(cell_size / 2.0, cell_size / 2.0)
+				
+				
 			
-			if roll < 97:
+			if roll < probability_8:
 				continue
-			elif roll < 98:
+			elif roll < probability_9:
 				spawn_object(scene_3, spawn_pos)
-			elif roll < 99:
+			elif roll < probability_10:
 				spawn_object(scene_2, spawn_pos)
 			else:
 				spawn_object(scene_1, spawn_pos)
