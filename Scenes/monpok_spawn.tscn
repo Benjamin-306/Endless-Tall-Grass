@@ -1,11 +1,6 @@
 [gd_scene format=3 uid="uid://c6qcbj2evfgq1"]
 
 [ext_resource type="Script" uid="uid://dliov8oyfdxny" path="res://script/monpok_spawn.gd" id="1_xqw6t"]
-[ext_resource type="PackedScene" uid="uid://csxfppky5ik01" path="res://Scenes/Monpok01.tscn" id="2_7r6gq"]
-[ext_resource type="PackedScene" uid="uid://b2kj25jq1rl3a" path="res://Scenes/Monpok03.tscn" id="2_gyw6f"]
-[ext_resource type="PackedScene" uid="uid://brgt63pxlitfb" path="res://Scenes/Monpok02.tscn" id="3_exk6n"]
 
 [node name="MonpokSpawnGrassland" type="Node" unique_id=1269393051]
 script = ExtResource("1_xqw6t")
-scenes = Array[PackedScene]([ExtResource("2_7r6gq"), ExtResource("3_exk6n"), ExtResource("2_gyw6f")])
-probabilities = Array[int]([2, 4, 6])

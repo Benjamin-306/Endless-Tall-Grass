@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://csxfppky5ik01"]
 
 [ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_5odka"]
-[ext_resource type="Texture2D" uid="uid://b0vpur2sbqe5h" path="res://Assets/Sprites/Monpok_01.png" id="2_lurro"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r2f3y"]
+load_path = "res://.godot/imported/Monpok_01.png-01ac767340f5bd371898a3c05ecfe379.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnwda"]
 size = Vector2(12, 14)
@@ -18,7 +20,7 @@ IMAGE = "res://Assets/Sprites/Monpok_01.png"
 TEXT = "Monpok1"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1461861378]
-texture = ExtResource("2_lurro")
+texture = SubResource("CompressedTexture2D_r2f3y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=351416234]
 position = Vector2(-1, 1)
