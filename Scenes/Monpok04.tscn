@@ -19,6 +19,7 @@ IMAGE = "res://Assets/Sprites/Monpok_04.png"
 TEXT = "Monpok4"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=196641063]
+z_index = 9
 texture = SubResource("CompressedTexture2D_iy5fj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497896617]
