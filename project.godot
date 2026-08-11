@@ -27,6 +27,10 @@ enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
 monpoks=""
 balls=""
 
+[gui]
+
+theme/custom="uid://duujgrb3pp3ci"
+
 [input]
 
 move_right={

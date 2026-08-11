@@ -20,8 +20,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -233.0
-offset_top = -96.0
+offset_left = -240.0
+offset_top = -104.0
+offset_right = -7.0
+offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -35,9 +37,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -507.0
-offset_top = -96.0
-offset_right = -274.0
+offset_left = -480.0
+offset_top = -104.0
+offset_right = -247.0
+offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -46,21 +49,23 @@ text = "Fliehen"
 
 [node name="Label3" type="Label" parent="ColorRect" unique_id=630057201]
 layout_mode = 1
-offset_right = 262.0
-offset_bottom = 96.0
+offset_left = 22.0
+offset_top = 6.0
+offset_right = 284.0
+offset_bottom = 102.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Monpok"
 
 [node name="WorldTileset" type="Sprite2D" parent="ColorRect" unique_id=1584393867]
-position = Vector2(579, 334.00003)
+position = Vector2(555, 307)
 scale = Vector2(24.375, 24.375)
 texture = ExtResource("1_kpohc")
 region_enabled = true
 region_rect = Rect2(15, 0, 16, 16)
 
 [node name="Monpok" type="Sprite2D" parent="ColorRect" unique_id=312465912]
-position = Vector2(582.00006, 306.00003)
+position = Vector2(558.00006, 279)
 scale = Vector2(16.1875, 16.1875)
 
 [connection signal="pressed" from="ColorRect/CatchButton" to="." method="_on_catch_button_pressed"]
