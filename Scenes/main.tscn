@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://csxfppky5ik01" path="res://Scenes/Monpok01.tscn" id="7_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://di6f1jfdwl30j" path="res://Scenes/Monpok04.tscn" id="7_hibaj"]
 [ext_resource type="PackedScene" uid="uid://brgt63pxlitfb" path="res://Scenes/Monpok02.tscn" id="8_gt3je"]
-[ext_resource type="PackedScene" uid="uid://c6euhqpvk5w7r" path="res://Scenes/Monpok05.tscn" id="8_pdsj5"]
+[ext_resource type="PackedScene" uid="uid://cl5rhmb1yrb62" path="res://Scenes/Monpok05.tscn" id="8_pdsj5"]
 [ext_resource type="AudioStream" uid="uid://dfan8gk04k1sk" path="res://Assets/sounds/Pallet Path Dreams(1).mp3" id="9_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://b2kj25jq1rl3a" path="res://Scenes/Monpok03.tscn" id="9_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]
