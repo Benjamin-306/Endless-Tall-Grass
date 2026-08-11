@@ -93,10 +93,10 @@ grow_vertical = 2
 [node name="Monpok1" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=982685972]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 11.0
-offset_top = 8.0
-offset_right = 98.0
-offset_bottom = 95.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 103.0
+offset_bottom = 103.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok1" unique_id=266395074]
 layout_mode = 1
@@ -120,15 +120,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok2" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1049667352]
+[node name="Monpok2" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1974450928]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 98.0
-offset_top = 8.0
-offset_right = 185.0
-offset_bottom = 95.0
+offset_left = 120.0
+offset_top = 16.0
+offset_right = 207.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1314481575]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=656831847]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -136,7 +136,7 @@ offset_top = -1.0
 offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1619867854]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1672965170]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -150,51 +150,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok3" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=903312371]
+[node name="Monpok3" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1503401226]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 185.0
-offset_top = 7.0
-offset_right = 272.0
-offset_bottom = 94.0
+offset_left = 224.0
+offset_top = 16.0
+offset_right = 311.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=986488911]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=477852259]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 1.0
-offset_bottom = 67.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=832048717]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Monpok4" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1671825710]
-layout_mode = 1
-anchors_preset = 0
-offset_left = 272.0
-offset_top = 8.0
-offset_right = 359.0
-offset_bottom = 95.0
-
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=1923738981]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 66.0
-grow_horizontal = 2
-
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=714094529]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=1256434665]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -208,22 +180,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok5" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=2085773437]
+[node name="Monpok4" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1061295396]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 359.0
-offset_top = 8.0
-offset_right = 446.0
-offset_bottom = 95.0
+offset_left = 328.0
+offset_top = 16.0
+offset_right = 415.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=1651272256]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=172267721]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=936200576]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=1828639657]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -237,22 +210,113 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok6" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1945788081]
+[node name="Monpok5" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=655528621]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 446.0
-offset_top = 8.0
-offset_right = 533.0
-offset_bottom = 95.0
+offset_left = 432.0
+offset_top = 16.0
+offset_right = 519.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=31177030]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=2064433320]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=1069706989]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=1460020014]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok6" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=956764199]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 536.0
+offset_top = 16.0
+offset_right = 623.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=743402190]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=277378152]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok7" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1602361102]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 640.0
+offset_top = 16.0
+offset_right = 727.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok7" unique_id=520370772]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok7" unique_id=1902695482]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok8" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=890118356]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 744.0
+offset_top = 16.0
+offset_right = 831.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok8" unique_id=1471289676]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok8" unique_id=22762762]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
