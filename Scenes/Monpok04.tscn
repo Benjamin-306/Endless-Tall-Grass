@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://di6f1jfdwl30j"]
+[gd_scene format=3 uid="uid://yvljdsuheom8"]
 
 [ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_0kgss"]
 
@@ -11,7 +11,7 @@ size = Vector2(12, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmtv8"]
 size = Vector2(12, 14)
 
-[node name="Monpok2" type="AnimatableBody2D" unique_id=1567865563 groups=["monpoks"]]
+[node name="Monpok" type="AnimatableBody2D" unique_id=1567865563 groups=["monpoks"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_0kgss")
