@@ -43,6 +43,6 @@ Benjamin-306 + JustinCase-306
 <br>
 
 > [!NOTE]
-> Version: 1.9.1
+> Version: 1.9.2
 > 
-> Worktime: 25 hours
+> Worktime: 30 hours
