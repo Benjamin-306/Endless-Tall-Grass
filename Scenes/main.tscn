@@ -23,6 +23,17 @@
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://cfj2er8drhstb" path="res://Assets/Sprites/game_essential.png" id="21_ee4r6"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
+atlas = ExtResource("21_ee4r6")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d4es"]
+atlas = ExtResource("21_ee4r6")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
+radius = 33.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
 size = Vector2(1920, 2960)
 
@@ -59,17 +70,6 @@ size = Vector2(4623, 991)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
 size = Vector2(1217, 224)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
-atlas = ExtResource("21_ee4r6")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4d4es"]
-atlas = ExtResource("21_ee4r6")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
-radius = 33.0
-
 [node name="Main" type="Node" unique_id=713701403]
 
 [node name="GameManager" type="Node" parent="." unique_id=1611143294]
@@ -77,6 +77,22 @@ unique_name_in_owner = true
 script = ExtResource("1_21xkr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=296014457]
+
+[node name="Control" type="Control" parent="GameManager/CanvasLayer" unique_id=1264197857]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="GameManager/CanvasLayer/Control" unique_id=1826075087]
+scale = Vector2(8, 8)
+texture_normal = SubResource("AtlasTexture_qcma1")
+texture_pressed = SubResource("AtlasTexture_4d4es")
+shape = SubResource("CircleShape2D_wsu2k")
+action = "inventory"
 
 [node name="Inventory" type="Control" parent="GameManager/CanvasLayer" unique_id=1110057154]
 unique_name_in_owner = true
@@ -699,22 +715,6 @@ action_left = &"move_left"
 action_up = &"move_up"
 action_right = &"move_right"
 action_down = &"move_down"
-
-[node name="Control" type="Control" parent="TouchButtons/CanvasLayer" unique_id=1264197857]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="TouchButtons/CanvasLayer/Control" unique_id=1826075087]
-scale = Vector2(1.8125, 1.8125)
-texture_normal = SubResource("AtlasTexture_qcma1")
-texture_pressed = SubResource("AtlasTexture_4d4es")
-shape = SubResource("CircleShape2D_wsu2k")
-action = "inventory"
 
 [node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
 position = Vector2(360, 34)
