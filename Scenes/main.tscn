@@ -7,7 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://titfgcjosssa" path="res://Scenes/on_monpok_captured.tscn" id="3_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://c6qcbj2evfgq1" path="res://Scenes/monpok_spawn.tscn" id="7_6bp64"]
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
+[ext_resource type="PackedScene" uid="uid://csxfppky5ik01" path="res://Scenes/Monpok01.tscn" id="7_ee4r6"]
+[ext_resource type="PackedScene" uid="uid://di6f1jfdwl30j" path="res://Scenes/Monpok04.tscn" id="7_hibaj"]
+[ext_resource type="PackedScene" uid="uid://brgt63pxlitfb" path="res://Scenes/Monpok02.tscn" id="8_gt3je"]
+[ext_resource type="PackedScene" uid="uid://cl5rhmb1yrb62" path="res://Scenes/Monpok05.tscn" id="8_pdsj5"]
 [ext_resource type="AudioStream" uid="uid://dfan8gk04k1sk" path="res://Assets/sounds/Pallet Path Dreams(1).mp3" id="9_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://b2kj25jq1rl3a" path="res://Scenes/Monpok03.tscn" id="9_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://ov04622e34fs" path="res://Scenes/music_change_by_area.tscn" id="9_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/Monpokball1.tscn" id="10_hptm8"]
@@ -15,8 +20,19 @@
 [ext_resource type="AudioStream" uid="uid://6pvs5fn21vlk" path="res://Assets/sounds/PixelOven1.mp3" id="12_6iyac"]
 [ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
-[ext_resource type="Texture2D" uid="uid://co0ln7v7grc43" path="res://Assets/Sprites/InvetorySign.png" id="14_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
+[ext_resource type="Texture2D" uid="uid://cfj2er8drhstb" path="res://Assets/Sprites/game_essential.png" id="21_ee4r6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
+atlas = ExtResource("21_ee4r6")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d4es"]
+atlas = ExtResource("21_ee4r6")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
+radius = 33.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
 size = Vector2(1920, 2960)
@@ -54,9 +70,6 @@ size = Vector2(4623, 991)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
 size = Vector2(1217, 224)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
-radius = 33.0
-
 [node name="Main" type="Node" unique_id=713701403]
 
 [node name="GameManager" type="Node" parent="." unique_id=1611143294]
@@ -64,6 +77,22 @@ unique_name_in_owner = true
 script = ExtResource("1_21xkr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=296014457]
+
+[node name="Control" type="Control" parent="GameManager/CanvasLayer" unique_id=1264197857]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="GameManager/CanvasLayer/Control" unique_id=1826075087]
+scale = Vector2(8, 8)
+texture_normal = SubResource("AtlasTexture_qcma1")
+texture_pressed = SubResource("AtlasTexture_4d4es")
+shape = SubResource("CircleShape2D_wsu2k")
+action = "inventory"
 
 [node name="Inventory" type="Control" parent="GameManager/CanvasLayer" unique_id=1110057154]
 unique_name_in_owner = true
@@ -88,10 +117,10 @@ grow_vertical = 2
 [node name="Monpok1" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=982685972]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 11.0
-offset_top = 8.0
-offset_right = 98.0
-offset_bottom = 95.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 103.0
+offset_bottom = 103.0
 
 [node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok1" unique_id=266395074]
 layout_mode = 1
@@ -115,15 +144,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok2" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1049667352]
+[node name="Monpok2" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1974450928]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 98.0
-offset_top = 8.0
-offset_right = 185.0
-offset_bottom = 95.0
+offset_left = 120.0
+offset_top = 16.0
+offset_right = 207.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1314481575]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=656831847]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -131,7 +160,7 @@ offset_top = -1.0
 offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1619867854]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok2" unique_id=1672965170]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -145,51 +174,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok3" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=903312371]
+[node name="Monpok3" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1503401226]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 185.0
-offset_top = 7.0
-offset_right = 272.0
-offset_bottom = 94.0
+offset_left = 224.0
+offset_top = 16.0
+offset_right = 311.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=986488911]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=477852259]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 1.0
-offset_bottom = 67.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=832048717]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Monpok4" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1671825710]
-layout_mode = 1
-anchors_preset = 0
-offset_left = 272.0
-offset_top = 8.0
-offset_right = 359.0
-offset_bottom = 95.0
-
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=1923738981]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 66.0
-grow_horizontal = 2
-
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=714094529]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok3" unique_id=1256434665]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -203,22 +204,23 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok5" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=2085773437]
+[node name="Monpok4" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1061295396]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 359.0
-offset_top = 8.0
-offset_right = 446.0
-offset_bottom = 95.0
+offset_left = 328.0
+offset_top = 16.0
+offset_right = 415.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=1651272256]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=172267721]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=936200576]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok4" unique_id=1828639657]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -232,22 +234,113 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Monpok6" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1945788081]
+[node name="Monpok5" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=655528621]
 layout_mode = 1
 anchors_preset = 0
-offset_left = 446.0
-offset_top = 8.0
-offset_right = 533.0
-offset_bottom = 95.0
+offset_left = 432.0
+offset_top = 16.0
+offset_right = 519.0
+offset_bottom = 103.0
 
-[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=31177030]
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=2064433320]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 66.0
+offset_top = -1.0
+offset_bottom = 65.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=1069706989]
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok5" unique_id=1460020014]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok6" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=956764199]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 536.0
+offset_top = 16.0
+offset_right = 623.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=743402190]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok6" unique_id=277378152]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok7" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=1602361102]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 640.0
+offset_top = 16.0
+offset_right = 727.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok7" unique_id=520370772]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok7" unique_id=1902695482]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monpok8" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=890118356]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 744.0
+offset_top = 16.0
+offset_right = 831.0
+offset_bottom = 103.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/CanvasLayer/Inventory/Monpok8" unique_id=1471289676]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="GameManager/CanvasLayer/Inventory/Monpok8" unique_id=22762762]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -307,10 +400,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -71.0
-offset_top = -15.0
-offset_right = -31.0
-offset_bottom = 73.0
+offset_left = -65.0
+offset_top = -7.0
+offset_right = -25.0
+offset_bottom = 81.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -322,7 +415,7 @@ visible = false
 position = Vector2(133, 173)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=451561475]
-zoom = Vector2(2, 2)
+zoom = Vector2(3.5, 3.5)
 limit_left = -3824
 limit_top = -2416
 limit_right = 4368
@@ -334,6 +427,8 @@ rotation_smoothing_enabled = true
 [node name="MonpokSpawnContainers" type="Node" parent="." unique_id=866670643]
 
 [node name="MonpokSpawnGrassland" parent="MonpokSpawnContainers" unique_id=1269393051 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland" unique_id=530889412]
 visible = false
@@ -343,6 +438,8 @@ offset_right = 32.0
 offset_bottom = 193.0
 
 [node name="MonpokSpawnGrassland2" parent="MonpokSpawnContainers" unique_id=384520476 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland2" unique_id=1104410190]
 visible = false
@@ -352,6 +449,8 @@ offset_right = 337.0
 offset_bottom = 177.0
 
 [node name="MonpokSpawnGrassland4" parent="MonpokSpawnContainers" unique_id=882697780 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland4" unique_id=1338316090]
 visible = false
@@ -361,6 +460,8 @@ offset_right = 384.0
 offset_bottom = 272.0
 
 [node name="MonpokSpawnGrassland5" parent="MonpokSpawnContainers" unique_id=1439011477 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland5" unique_id=1134015174]
 visible = false
@@ -370,6 +471,8 @@ offset_right = 240.0
 offset_bottom = 291.0
 
 [node name="MonpokSpawnGrassland6" parent="MonpokSpawnContainers" unique_id=294072893 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland6" unique_id=138459864]
 visible = false
@@ -379,6 +482,8 @@ offset_right = 272.0
 offset_bottom = 17.0
 
 [node name="MonpokSpawnGrassland7" parent="MonpokSpawnContainers" unique_id=536342156 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland7" unique_id=279922650]
 visible = false
@@ -388,6 +493,8 @@ offset_right = -29.0
 offset_bottom = 49.0
 
 [node name="MonpokSpawnGrassland8" parent="MonpokSpawnContainers" unique_id=1832323734 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland8" unique_id=465952347]
 visible = false
@@ -397,6 +504,8 @@ offset_right = -381.0
 offset_bottom = 274.0
 
 [node name="MonpokSpawnGrassland9" parent="MonpokSpawnContainers" unique_id=127088647 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland9" unique_id=229597004]
 visible = false
@@ -406,6 +515,8 @@ offset_right = -10.0
 offset_bottom = 421.0
 
 [node name="MonpokSpawnGrassland10" parent="MonpokSpawnContainers" unique_id=382795023 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland10" unique_id=1245360772]
 visible = false
@@ -415,6 +526,8 @@ offset_right = 659.0
 offset_bottom = 513.0
 
 [node name="MonpokSpawnGrassland11" parent="MonpokSpawnContainers" unique_id=1964908369 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland11" unique_id=2146596417]
 visible = false
@@ -424,6 +537,8 @@ offset_right = 741.0
 offset_bottom = 305.0
 
 [node name="MonpokSpawnGrassland12" parent="MonpokSpawnContainers" unique_id=384747984 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("7_ee4r6"), ExtResource("8_gt3je"), ExtResource("9_ee4r6")])
+probabilities = Array[int]([2, 4, 6])
 
 [node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnGrassland12" unique_id=662087586]
 visible = false
@@ -431,6 +546,15 @@ offset_left = 519.0
 offset_top = -81.0
 offset_right = 741.0
 offset_bottom = -30.0
+
+[node name="MonpokSpawnMediumland" parent="MonpokSpawnContainers" unique_id=609345916 instance=ExtResource("7_6bp64")]
+scenes = Array[PackedScene]([ExtResource("9_ee4r6"), ExtResource("7_hibaj"), ExtResource("8_pdsj5")])
+probabilities = Array[int]([2, 4, 6])
+
+[node name="ColorRect" type="ColorRect" parent="MonpokSpawnContainers/MonpokSpawnMediumland" unique_id=1994360879]
+offset_left = -322.0
+offset_top = -640.0
+offset_bottom = -480.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=562311448]
 stream = ExtResource("7_344ge")
@@ -591,21 +715,6 @@ action_left = &"move_left"
 action_up = &"move_up"
 action_right = &"move_right"
 action_down = &"move_down"
-
-[node name="Control" type="Control" parent="TouchButtons/CanvasLayer" unique_id=1264197857]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="TouchButtons/CanvasLayer/Control" unique_id=1826075087]
-scale = Vector2(1.8125, 1.8125)
-texture_normal = ExtResource("14_jkdf5")
-texture_pressed = ExtResource("14_jkdf5")
-shape = SubResource("CircleShape2D_wsu2k")
-action = "inventory"
 
 [node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
 position = Vector2(360, 34)

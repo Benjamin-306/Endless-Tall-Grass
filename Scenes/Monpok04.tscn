@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://di6f1jfdwl30j"]
+
+[ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_0kgss"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iy5fj"]
+load_path = "res://.godot/imported/Monpok_04.png-396a57dc901def09b84573aabe70b19f.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fnim"]
+size = Vector2(12, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmtv8"]
+size = Vector2(12, 14)
+
+[node name="Monpok2" type="AnimatableBody2D" unique_id=1567865563 groups=["monpoks"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_0kgss")
+IMAGE = "res://Assets/Sprites/Monpok_04.png"
+TEXT = "Monpok4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=196641063]
+z_index = 9
+texture = SubResource("CompressedTexture2D_iy5fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497896617]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_3fnim")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1080249665]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=401392452]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_gmtv8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
