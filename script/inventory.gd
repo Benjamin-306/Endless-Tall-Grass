@@ -23,3 +23,18 @@ func add(TEXT, IMAGE):
 func _on_timer_timeout() -> void:
 	hide()
 	$Label.hide()
+
+
+func _on_clear_inventory_pressed() -> void:
+	for place in range(inventory.size()):
+		place += 1
+		var direction_rect = get_node("Monpok" + str(place) + "/TextureRect")
+		var direction_label = get_node("Monpok" + str(place) + "/Label")
+		if direction_rect:
+			direction_rect.texture = null
+		if direction_label:
+			direction_label.text = ""
+	inventory.clear()
+		
+		
+		
