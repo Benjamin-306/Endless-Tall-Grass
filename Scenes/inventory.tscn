@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://bap6386e1jobk"]
 
 [ext_resource type="Script" uid="uid://xltgaoj6y8no" path="res://script/inventory.gd" id="1_wdn4f"]
+[ext_resource type="Texture2D" uid="uid://cfj2er8drhstb" path="res://Assets/Sprites/game_essential.png" id="2_k5gp2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhfpc"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5gp2"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxepq"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(16, 48, 16, 16)
 
 [node name="Inventory" type="Control" unique_id=692365001]
 visible = false
@@ -283,4 +296,17 @@ text = " Your inventory is full!"
 wait_time = 2.0
 one_shot = true
 
+[node name="ClearInventory" type="TextureButton" parent="." unique_id=1869644236]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 536.0
+offset_right = 1140.0
+offset_bottom = 636.0
+tooltip_text = "Clear Inventory"
+texture_normal = SubResource("AtlasTexture_hhfpc")
+texture_pressed = SubResource("AtlasTexture_k5gp2")
+texture_hover = SubResource("AtlasTexture_yxepq")
+stretch_mode = 0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="ClearInventory" to="." method="_on_clear_inventory_pressed"]
