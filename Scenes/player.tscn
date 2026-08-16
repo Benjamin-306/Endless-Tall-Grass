@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5laq2ns3o04k"]
 
 [ext_resource type="Script" uid="uid://crwkns2cguwob" path="res://script/player.gd" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://b3wejosyr8mqg" path="res://Assets/Sprites/player_spritesheet.png" id="2_vgqql"]
+[ext_resource type="Texture2D" uid="uid://7no1cxniu74l" path="res://Assets/Sprites/player_spritesheet.png" id="2_vgqql"]
 [ext_resource type="AudioStream" uid="uid://c10oqvj1khjqg" path="res://Assets/sounds/SFX/grass_01.mp3" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
@@ -126,8 +126,6 @@ script = ExtResource("1_v0iea")
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"run"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.6401522
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=113325905]
 position = Vector2(1, 5)

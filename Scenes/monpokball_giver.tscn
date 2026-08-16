@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmfshvvasmq6w"]
 
-[ext_resource type="Texture2D" uid="uid://bw274e13ub7mw" path="res://Assets/Sprites/dropper.png" id="1_8ko23"]
+[ext_resource type="Texture2D" uid="uid://d4c62gs020vmv" path="res://Assets/Sprites/dropper.png" id="1_8ko23"]
 [ext_resource type="Script" uid="uid://cnqx2fvm866n8" path="res://script/monpokball_giver.gd" id="1_g2bpf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2bpf"]
