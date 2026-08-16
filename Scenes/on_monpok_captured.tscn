@@ -6,15 +6,15 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhfpc"]
 atlas = ExtResource("3_i4ija")
-region = Rect2(0, 36, 16, 8)
+region = Rect2(16, 20, 16, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yps4j"]
 atlas = ExtResource("3_i4ija")
-region = Rect2(16, 36, 16, 8)
+region = Rect2(32, 20, 16, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_207ru"]
 atlas = ExtResource("3_i4ija")
-region = Rect2(16, 36, 16, 8)
+region = Rect2(0, 36, 16, 8)
 
 [node name="OnMonpokCaptured" type="CanvasLayer" unique_id=1182462886]
 script = ExtResource("1_i4ija")
@@ -59,15 +59,19 @@ texture_hover = SubResource("AtlasTexture_207ru")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/CatchButton" unique_id=91255784]
-layout_mode = 0
-offset_right = 233.0
-offset_bottom = 96.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 64
 text = "Fangen"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CatchButton2" type="TextureButton" parent="ColorRect" unique_id=439917254]
 custom_minimum_size = Vector2(200, 80)

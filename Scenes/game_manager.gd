@@ -15,3 +15,10 @@ func _process(_delta: float) -> void:
 func update_balls(balls):
 	balls = str(balls)
 	$CanvasLayer/Balls/Label.text = balls
+
+
+func _on_touch_screen_button_pressed() -> void:
+	if not $CanvasLayer/Inventory.visible:
+			$CanvasLayer/Inventory.show()
+	else:
+		$CanvasLayer/Inventory.hide()

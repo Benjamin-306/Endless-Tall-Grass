@@ -5,15 +5,15 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhfpc"]
 atlas = ExtResource("2_k5gp2")
-region = Rect2(0, 48, 16, 16)
+region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k5gp2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee4r6"]
 atlas = ExtResource("2_k5gp2")
-region = Rect2(16, 48, 16, 16)
+region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxepq"]
 atlas = ExtResource("2_k5gp2")
-region = Rect2(16, 48, 16, 16)
+region = Rect2(32, 32, 16, 16)
 
 [node name="Inventory" type="Control" unique_id=692365001]
 visible = false
@@ -24,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_wdn4f")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1132435521]
@@ -33,6 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Monpok1" type="Control" parent="." unique_id=982133380]
 layout_mode = 1
@@ -297,16 +299,24 @@ wait_time = 2.0
 one_shot = true
 
 [node name="ClearInventory" type="TextureButton" parent="." unique_id=1869644236]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 536.0
-offset_right = 1140.0
-offset_bottom = 636.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9131944
+anchor_top = 0.845679
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
 tooltip_text = "Clear Inventory"
 texture_normal = SubResource("AtlasTexture_hhfpc")
-texture_pressed = SubResource("AtlasTexture_k5gp2")
+texture_pressed = SubResource("AtlasTexture_ee4r6")
 texture_hover = SubResource("AtlasTexture_yxepq")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ClearInventory" to="." method="_on_clear_inventory_pressed"]
