@@ -30,7 +30,7 @@ func setup(image, text, body):
 	TEXT = text
 	BODY = body
 	$ColorRect/Label3.text = TEXT
-	$ColorRect/Monpok.texture = load(IMAGE)
+	$ColorRect/Monpok.texture = IMAGE
 	if body.balls <= 0:
 		$ColorRect/CatchButton.disabled = true
 	else:
