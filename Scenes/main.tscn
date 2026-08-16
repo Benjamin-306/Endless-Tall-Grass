@@ -116,11 +116,17 @@ mouse_filter = 2
 
 [node name="TextureButton" type="TextureButton" parent="GameManager/CanvasLayer/Inventory/Control2" unique_id=430380405]
 z_index = 10
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
 scale = Vector2(8, 8)
 texture_normal = SubResource("AtlasTexture_qcma1")
 texture_pressed = SubResource("AtlasTexture_4d4es")
 texture_hover = SubResource("AtlasTexture_ee4r6")
+metadata/_edit_use_anchors_ = true
 
 [node name="Balls" type="Control" parent="GameManager/CanvasLayer" unique_id=326966861]
 layout_mode = 3

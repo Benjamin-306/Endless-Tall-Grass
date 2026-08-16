@@ -14,7 +14,7 @@ region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxepq"]
 atlas = ExtResource("2_k5gp2")
-region = Rect2(32, 32, 16, 16)
+region = Rect2(0, 48, 16, 16)
 
 [node name="Inventory" type="Control" unique_id=692365001]
 visible = false
