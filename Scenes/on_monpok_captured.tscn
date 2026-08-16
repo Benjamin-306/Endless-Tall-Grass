@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://titfgcjosssa"]
 
 [ext_resource type="Script" uid="uid://bg2nibxmtfrrc" path="res://script/on_monpok_captured.gd" id="1_i4ija"]
-[ext_resource type="Texture2D" uid="uid://c2nvy0s873683" path="res://Assets/Sprites/catch_sprite.png" id="2_i4ija"]
-[ext_resource type="Texture2D" uid="uid://d3stilv7g8gvp" path="res://Assets/Sprites/essential_spritesheet.png" id="3_i4ija"]
+[ext_resource type="Texture2D" uid="uid://b24ou6md7kgi1" path="res://Assets/Sprites/WorldTileset.png" id="1_kpohc"]
+[ext_resource type="Texture2D" uid="uid://yssrikgfqmbb" path="res://Assets/Sprites/game_essential.png" id="3_i4ija"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhfpc"]
 atlas = ExtResource("3_i4ija")
