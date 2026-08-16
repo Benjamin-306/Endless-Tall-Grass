@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_3qklw"]
 [ext_resource type="Texture2D" uid="uid://j6fy6xybktxd" path="res://Assets/Sprites/Monpok_03.png" id="2_3qklw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_psqa1"]
+atlas = ExtResource("2_3qklw")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnwda"]
 size = Vector2(12, 14)
 
@@ -14,7 +17,7 @@ z_index = 9
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_3qklw")
-IMAGE = "res://Assets/Sprites/Monpok_03.png"
+IMAGE = SubResource("AtlasTexture_psqa1")
 TEXT = "Monpok3"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1461861378]
