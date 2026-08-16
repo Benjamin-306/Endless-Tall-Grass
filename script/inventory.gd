@@ -34,7 +34,7 @@ func _on_clear_inventory_pressed() -> void:
 			direction_rect.texture = null
 		if direction_label:
 			direction_label.text = ""
-	inventory.clear()
+	inventory = [null, null, null, null, null, null, null, null]
 		
 		
 		
