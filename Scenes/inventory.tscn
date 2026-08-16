@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bap6386e1jobk"]
 
 [ext_resource type="Script" uid="uid://xltgaoj6y8no" path="res://script/inventory.gd" id="1_wdn4f"]
-[ext_resource type="Texture2D" uid="uid://cfj2er8drhstb" path="res://Assets/Sprites/game_essential.png" id="2_k5gp2"]
+[ext_resource type="Texture2D" uid="uid://d3stilv7g8gvp" path="res://Assets/Sprites/essential_spritesheet.png" id="2_k5gp2"]
 [ext_resource type="Texture2D" uid="uid://c2nvy0s873683" path="res://Assets/Sprites/catch_sprite.png" id="2_yxepq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhfpc"]
