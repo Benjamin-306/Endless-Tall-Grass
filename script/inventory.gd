@@ -10,7 +10,7 @@ func add(TEXT, IMAGE):
 		free_place += 1
 		var direction_rect = get_node("Monpok" + str(free_place) + "/TextureRect")
 		var direction_label = get_node("Monpok" + str(free_place) + "/Label")
-		direction_rect.texture = load(IMAGE)
+		direction_rect.texture = IMAGE
 		direction_label.text = TEXT
 		inventory[free_place - 1] = TEXT
 	else:

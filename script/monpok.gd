@@ -1,6 +1,6 @@
 extends AnimatableBody2D
 
-@export var IMAGE : String
+@export var IMAGE : AtlasTexture
 @export var TEXT : String
 
 @onready var inventory = get_tree().root.find_child("Inventory", true, false)

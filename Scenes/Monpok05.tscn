@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://cl5rhmb1yrb62"]
 
 [ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_0gmv7"]
+[ext_resource type="Texture2D" uid="uid://dkwxipoxlmjxh" path="res://Assets/Sprites/Monpok_05.png" id="2_0gmv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrueh"]
+atlas = ExtResource("2_0gmv7")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3weyr"]
 load_path = "res://.godot/imported/Monpok_05.png-0ede7f536c10142bc3f00a621b3211fe.ctex"
@@ -16,7 +20,7 @@ z_index = 9
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_0gmv7")
-IMAGE = "res://Assets/Sprites/Monpok_05.png"
+IMAGE = SubResource("AtlasTexture_qrueh")
 TEXT = "Monpok5"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=196641063]
