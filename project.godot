@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="MonpokFirstSteps®"
+config/name="EndlessTallGrass"
 run/main_scene="uid://daigvy7a3x4jm"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.14117648, 0.73333335, 0.14117648, 1)

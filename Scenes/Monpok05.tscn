@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cl5rhmb1yrb62"]
 
 [ext_resource type="Script" uid="uid://ckludqwcsvuel" path="res://script/monpok.gd" id="1_0gmv7"]
-[ext_resource type="Texture2D" uid="uid://dkwxipoxlmjxh" path="res://Assets/Sprites/Monpok_05.png" id="2_0gmv7"]
+[ext_resource type="Texture2D" uid="uid://dkwxipoxlmjxh" path="res://Assets/Sprites/monpok_05.png" id="2_0gmv7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrueh"]
 atlas = ExtResource("2_0gmv7")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3weyr"]
-load_path = "res://.godot/imported/Monpok_05.png-0ede7f536c10142bc3f00a621b3211fe.ctex"
+load_path = "res://.godot/imported/monpok_05.png-17f3fec118b296c185f2290d2a6b157e.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3fnim"]
 size = Vector2(12, 14)
