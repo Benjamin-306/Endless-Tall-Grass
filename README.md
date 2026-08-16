@@ -44,6 +44,8 @@ Benjamin-306 + JustinCase-306
 
 > [!NOTE]
 > 
-> Version: 1.9.4
+> Version: 1.9.5
 >
-> Worktime: 36 hours
+> Worktime: 37 hours
+>
+> Note for developers: 26GDB full GDJ
