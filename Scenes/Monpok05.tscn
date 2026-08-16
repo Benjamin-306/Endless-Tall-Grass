@@ -6,9 +6,6 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrueh"]
 atlas = ExtResource("2_0gmv7")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3weyr"]
-load_path = "res://.godot/imported/Monpok_05.png-0ede7f536c10142bc3f00a621b3211fe.ctex"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3fnim"]
 size = Vector2(12, 14)
 
@@ -24,7 +21,7 @@ IMAGE = SubResource("AtlasTexture_qrueh")
 TEXT = "Monpok5"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=196641063]
-texture = SubResource("CompressedTexture2D_3weyr")
+texture = ExtResource("2_0gmv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497896617]
 position = Vector2(-1, 1)
