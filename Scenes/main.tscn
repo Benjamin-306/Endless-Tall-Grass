@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://dcovu0uc42dp3" path="res://Assets/Sprites/essential_spritesheet.png" id="21_ee4r6"]
-[ext_resource type="PackedScene" uid="uid://denssclchcln4" path="res://Scenes/wall.tscn" id="23_gt3je"]
+[ext_resource type="PackedScene" uid="uid://ib73j6r7epj2" path="res://Scenes/wall.tscn" id="23_gt3je"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
 atlas = ExtResource("21_ee4r6")
