@@ -27,6 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_i4ija")
+stretch_mode = 6
 
 [node name="Monpok" type="Sprite2D" parent="ColorRect" unique_id=312465912]
 position = Vector2(250, 400)
