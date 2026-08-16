@@ -25,14 +25,15 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
 atlas = ExtResource("21_ee4r6")
-region = Rect2(0, 16, 16, 16)
+region = Rect2(36, 0, 8, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4d4es"]
 atlas = ExtResource("21_ee4r6")
-region = Rect2(16, 16, 16, 16)
+region = Rect2(4, 16, 8, 16)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
-radius = 33.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee4r6"]
+atlas = ExtResource("21_ee4r6")
+region = Rect2(4, 16, 8, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkdf5"]
 size = Vector2(1920, 2960)
@@ -87,15 +88,39 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="GameManager/CanvasLayer/Control" unique_id=1826075087]
+[node name="TextureButton" type="TextureButton" parent="GameManager/CanvasLayer/Control" unique_id=1544088089]
+z_index = 10
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
 scale = Vector2(8, 8)
 texture_normal = SubResource("AtlasTexture_qcma1")
 texture_pressed = SubResource("AtlasTexture_4d4es")
-shape = SubResource("CircleShape2D_wsu2k")
-action = "inventory"
+texture_hover = SubResource("AtlasTexture_ee4r6")
+metadata/_edit_use_anchors_ = true
 
 [node name="Inventory" parent="GameManager/CanvasLayer" unique_id=692365001 instance=ExtResource("3_ee4r6")]
 unique_name_in_owner = true
+
+[node name="Control2" type="Control" parent="GameManager/CanvasLayer/Inventory" unique_id=142644984]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureButton" parent="GameManager/CanvasLayer/Inventory/Control2" unique_id=430380405]
+z_index = 10
+layout_mode = 0
+scale = Vector2(8, 8)
+texture_normal = SubResource("AtlasTexture_qcma1")
+texture_pressed = SubResource("AtlasTexture_4d4es")
+texture_hover = SubResource("AtlasTexture_ee4r6")
 
 [node name="Balls" type="Control" parent="GameManager/CanvasLayer" unique_id=326966861]
 layout_mode = 3
@@ -439,3 +464,6 @@ action_down = &"move_down"
 
 [node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
 position = Vector2(360, 34)
+
+[connection signal="pressed" from="GameManager/CanvasLayer/Control/TextureButton" to="GameManager" method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="GameManager/CanvasLayer/Inventory/Control2/TextureButton" to="GameManager" method="_on_touch_screen_button_pressed"]
