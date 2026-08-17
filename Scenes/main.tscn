@@ -21,8 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
-[ext_resource type="Texture2D" uid="uid://dcovu0uc42dp3" path="res://Assets/Sprites/essential_spritesheet.png" id="21_ee4r6"]
-[ext_resource type="PackedScene" uid="uid://ib73j6r7epj2" path="res://Scenes/wall.tscn" id="23_gt3je"]
+[ext_resource type="Texture2D" uid="uid://d3stilv7g8gvp" path="res://Assets/Sprites/essential_spritesheet.png" id="21_ee4r6"]
+[ext_resource type="PackedScene" uid="uid://denssclchcln4" path="res://Scenes/wall.tscn" id="23_gt3je"]
+[ext_resource type="PackedScene" uid="uid://b1636uqslu58g" path="res://start_anim.tscn" id="24_3pmx8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
 atlas = ExtResource("21_ee4r6")
@@ -493,6 +494,8 @@ position = Vector2(-83, 71)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2" unique_id=898065764]
 position = Vector2(99, 0)
 shape = SubResource("RectangleShape2D_hhfpc")
+
+[node name="StartAnim" parent="." unique_id=1327585273 instance=ExtResource("24_3pmx8")]
 
 [connection signal="pressed" from="GameManager/CanvasLayer/Control/TextureButton" to="GameManager" method="_on_touch_screen_button_pressed"]
 [connection signal="pressed" from="GameManager/CanvasLayer/Inventory/Control2/TextureButton" to="GameManager" method="_on_touch_screen_button_pressed"]
