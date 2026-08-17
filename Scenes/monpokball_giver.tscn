@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://cnqx2fvm866n8" path="res://script/monpokball_giver.gd" id="1_g2bpf"]
 [ext_resource type="Texture2D" uid="uid://bgqldlf7kw3vq" path="res://Assets/Sprites/dropper_spritesheet.png" id="2_g2bpf"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2bpf"]
+atlas = ExtResource("2_g2bpf")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb6im"]
+atlas = ExtResource("2_g2bpf")
+region = Rect2(32, 96, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4eeh"]
 atlas = ExtResource("2_g2bpf")
 region = Rect2(0, 0, 32, 32)
@@ -51,16 +59,19 @@ region = Rect2(64, 64, 32, 32)
 atlas = ExtResource("2_g2bpf")
 region = Rect2(96, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yb6im"]
-atlas = ExtResource("2_g2bpf")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sv720"]
-atlas = ExtResource("2_g2bpf")
-region = Rect2(32, 96, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2bpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb6im")
+}],
+"loop": 1,
+"name": &"available",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h4eeh")
@@ -97,12 +108,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xqyqo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yb6im")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sv720")
 }],
 "loop": 1,
 "name": &"default",
@@ -121,15 +126,15 @@ script = ExtResource("1_g2bpf")
 position = Vector2(17.000002, 17.000002)
 scale = Vector2(1.0625001, 1.0625001)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-autoplay = "default"
-frame_progress = 0.77794284
+animation = &"available"
+autoplay = "available"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1061869376]
 position = Vector2(17, 17)
 shape = SubResource("RectangleShape2D_g2bpf")
 
 [node name="Timer" type="Timer" parent="." unique_id=1002218321]
-wait_time = 13.0
+wait_time = 15.65
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
