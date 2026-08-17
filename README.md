@@ -22,6 +22,8 @@ But attention, you can only collect them if...
 
 Use <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>  or <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> to move your character around the world and explore new biomes!
 
+Press <kbd>E</kbd> or the <kbd>I</kbd> button top left to open your inventory.
+
 </details>
 
 # CREDITS
