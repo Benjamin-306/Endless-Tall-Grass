@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bk1vcdke8kwcj"]
 
-[ext_resource type="Texture2D" uid="uid://bj13oovqin3kp" path="res://Assets/Sprites/ball_spritesheet.png" id="1_q63lr"]
+[ext_resource type="Texture2D" uid="uid://4w3fpt3m7sj3" path="res://Assets/Sprites/ball_spritesheet.png" id="1_q63lr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ttj2"]
 atlas = ExtResource("1_q63lr")
@@ -65,7 +65,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8lsnq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 4.0
 }, {
@@ -94,7 +94,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oovpu")
 }],
-"loop": true,
+"loop": 1,
 "name": &"use",
 "speed": 10.0
 }]
@@ -109,7 +109,7 @@ collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=380507742]
 sprite_frames = SubResource("SpriteFrames_g872w")
-animation = &"use"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538864603]
