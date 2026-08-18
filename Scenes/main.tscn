@@ -22,7 +22,6 @@
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://dcovu0uc42dp3" path="res://Assets/Sprites/essential_spritesheet.png" id="21_ee4r6"]
-[ext_resource type="PackedScene" uid="uid://denssclchcln4" path="res://Scenes/wall.tscn" id="23_gt3je"]
 [ext_resource type="PackedScene" uid="uid://b1636uqslu58g" path="res://start_anim.tscn" id="24_3pmx8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
@@ -72,12 +71,6 @@ size = Vector2(4623, 991)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdsj5"]
 size = Vector2(1217, 224)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gt3je"]
-size = Vector2(256, 10)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhfpc"]
-size = Vector2(192, 10)
 
 [node name="Main" type="Node" unique_id=713701403]
 
@@ -478,36 +471,6 @@ action_down = &"move_down"
 
 [node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
 position = Vector2(349, 30)
-
-[node name="Walls" type="Node" parent="." unique_id=999606617]
-
-[node name="Wall" parent="Walls" unique_id=1294221116 instance=ExtResource("23_gt3je")]
-position = Vector2(189, 71)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall" unique_id=2072777573]
-position = Vector2(67, 4)
-shape = SubResource("RectangleShape2D_gt3je")
-
-[node name="Wall2" parent="Walls" unique_id=1305577450 instance=ExtResource("23_gt3je")]
-position = Vector2(-83, 71)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2" unique_id=898065764]
-position = Vector2(99, 4)
-shape = SubResource("RectangleShape2D_hhfpc")
-
-[node name="Wall3" parent="Walls" unique_id=1233528169 instance=ExtResource("23_gt3je")]
-position = Vector2(397, 71)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3" unique_id=615951344]
-position = Vector2(99, 4)
-shape = SubResource("RectangleShape2D_hhfpc")
-
-[node name="Wall4" parent="Walls" unique_id=205711748 instance=ExtResource("23_gt3je")]
-position = Vector2(189, 7)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4" unique_id=557576018]
-position = Vector2(99, 4)
-shape = SubResource("RectangleShape2D_hhfpc")
 
 [node name="StartAnim" parent="." unique_id=1327585273 instance=ExtResource("24_3pmx8")]
 
