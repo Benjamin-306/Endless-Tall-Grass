@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://titfgcjosssa" path="res://Scenes/on_monpok_captured.tscn" id="3_wsu2k"]
 [ext_resource type="AudioStream" uid="uid://bdgr1yua5rin4" path="res://Assets/sounds/SoundtrackStarfieldSavePoint.mp3" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://daii8sfm5jyug" path="res://Scenes/WorldTileMap1.res" id="9_hptm8"]
-[ext_resource type="PackedScene" uid="uid://bk1vcdke8kwcj" path="res://Scenes/Monpokball1.tscn" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="12_fdnlq"]
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
@@ -138,20 +137,6 @@ max_distance = 661160.0
 bus = &"BackgroundMusic"
 
 [node name="TileMap" parent="." unique_id=583086938 instance=ExtResource("9_hptm8")]
-
-[node name="Balls" type="Node" parent="." unique_id=1327199442]
-
-[node name="Monpokball1" parent="Balls" unique_id=945892380 instance=ExtResource("10_hptm8")]
-position = Vector2(179, 170)
-
-[node name="Monpokball2" parent="Balls" unique_id=717337552 instance=ExtResource("10_hptm8")]
-position = Vector2(368, -88)
-
-[node name="Monpokball3" parent="Balls" unique_id=378029875 instance=ExtResource("10_hptm8")]
-position = Vector2(-318, 22)
-
-[node name="Monpokball4" parent="Balls" unique_id=1889623998 instance=ExtResource("10_hptm8")]
-position = Vector2(366, 410)
 
 [node name="TouchButtons" type="Node" parent="." unique_id=29240818]
 script = ExtResource("12_jkdf5")
