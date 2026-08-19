@@ -46,8 +46,8 @@ Benjamin-306 + JustinCase-306
 
 > [!NOTE]
 > 
-> Version: 1.9.6
+> Version: 1.9.7
 >
-> Worktime: 41 hours
+> Worktime: 43 hours
 >
 > Note for developers: 4GDBo full GDJ
