@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xltgaoj6y8no" path="res://script/inventory.gd" id="1_wdn4f"]
 [ext_resource type="Texture2D" uid="uid://dcovu0uc42dp3" path="res://Assets/Sprites/essential_spritesheet.png" id="2_k5gp2"]
-[ext_resource type="Texture2D" uid="uid://c01le4yvsfnyj" path="res://Assets/Sprites/catch_sprite.png" id="2_yxepq"]
+[ext_resource type="Texture2D" uid="uid://dbb46i2shqts0" path="res://Assets/Sprites/inventory.png" id="2_yxepq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hhfpc"]
 atlas = ExtResource("2_k5gp2")
@@ -28,7 +28,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_wdn4f")
 
-[node name="ColorRect" type="TextureRect" parent="." unique_id=1696243375]
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=1696243375]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
