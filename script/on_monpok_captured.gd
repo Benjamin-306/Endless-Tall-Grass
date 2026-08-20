@@ -8,7 +8,7 @@ var BODY = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$ColorRect.mouse_filter = Control.MOUSE_FILTER_PASS
+	$Background.mouse_filter = Control.MOUSE_FILTER_PASS
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,20 +29,20 @@ func setup(image, text, body):
 	IMAGE = image
 	TEXT = text
 	BODY = body
-	$ColorRect/Label3.text = TEXT
-	$ColorRect/Monpok.texture = IMAGE
+	$Background/Name.text = TEXT
+	$Background/Monpok.texture = IMAGE
 	if body.balls <= 0:
-		$ColorRect/CatchButton.disabled = true
+		$Background/CatchButton.disabled = true
 	else:
-		$ColorRect/CatchButton.disabled = false
+		$Background/CatchButton.disabled = false
 	
 func clean():
 	IMAGE = false
 	TEXT = false
 	BODY = false
 	catch = false
-	$ColorRect/Label3.text = "Monpok"
-	$ColorRect/Monpok.texture = null
+	$Background/Name.text = "Monpok"
+	$Background/Monpok.texture = null
 
 
 func _on_catch_button_pressed() -> void:
