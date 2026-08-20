@@ -19,7 +19,7 @@ region = Rect2(0, 36, 16, 8)
 [node name="OnMonpokCaptured" type="CanvasLayer" unique_id=1182462886]
 script = ExtResource("1_i4ija")
 
-[node name="ColorRect" type="TextureRect" parent="." unique_id=944081854]
+[node name="Background" type="TextureRect" parent="." unique_id=944081854]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -29,11 +29,11 @@ mouse_filter = 2
 texture = ExtResource("2_i4ija")
 stretch_mode = 6
 
-[node name="Monpok" type="Sprite2D" parent="ColorRect" unique_id=312465912]
+[node name="Monpok" type="Sprite2D" parent="Background" unique_id=312465912]
 position = Vector2(250, 400)
 scale = Vector2(16.1875, 16.1875)
 
-[node name="CatchButton" type="TextureButton" parent="ColorRect" unique_id=819523053]
+[node name="CatchButton" type="TextureButton" parent="Background" unique_id=819523053]
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 1
 anchors_preset = 3
@@ -53,7 +53,7 @@ texture_pressed = SubResource("AtlasTexture_yps4j")
 texture_hover = SubResource("AtlasTexture_207ru")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="ColorRect/CatchButton" unique_id=91255784]
+[node name="Catch" type="Label" parent="Background/CatchButton" unique_id=91255784]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,7 +68,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CatchButton2" type="TextureButton" parent="ColorRect" unique_id=439917254]
+[node name="EscapeButton" type="TextureButton" parent="Background" unique_id=439917254]
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 1
 anchors_preset = 3
@@ -88,7 +88,7 @@ texture_pressed = SubResource("AtlasTexture_yps4j")
 texture_hover = SubResource("AtlasTexture_207ru")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="ColorRect/CatchButton2" unique_id=2136111284]
+[node name="Escape" type="Label" parent="Background/EscapeButton" unique_id=2136111284]
 layout_mode = 0
 offset_right = 233.0
 offset_bottom = 96.0
@@ -99,7 +99,7 @@ text = "Fliehen"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="ColorRect" unique_id=630057201]
+[node name="Name" type="Label" parent="Background" unique_id=630057201]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 6.0
@@ -109,5 +109,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Monpok"
 
-[connection signal="pressed" from="ColorRect/CatchButton" to="." method="_on_catch_button_pressed"]
-[connection signal="pressed" from="ColorRect/CatchButton2" to="." method="_on_catch_button_pressed"]
+[connection signal="pressed" from="Background/CatchButton" to="." method="_on_catch_button_pressed"]
+[connection signal="pressed" from="Background/EscapeButton" to="." method="_on_catch_button_pressed"]

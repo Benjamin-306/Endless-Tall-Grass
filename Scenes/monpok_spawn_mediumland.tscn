@@ -15,7 +15,7 @@ probabilities = Array[int]([2, 4, 6])
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=484796743]
 texture = ExtResource("5_s7o1h")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=538452163]
+[node name="SpawnArea" type="ColorRect" parent="." unique_id=538452163]
 visible = false
 offset_left = -8.0
 offset_top = -8.0
