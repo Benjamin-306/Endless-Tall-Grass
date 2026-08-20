@@ -20,7 +20,7 @@ func _ready() -> void:
 		if probabilities[i] == 0:
 			push_warning("Warnung: probabilities[%d] ist 0!" % i)
 	
-	var area_size = $ColorRect.size
+	var area_size = $SpawnArea.size
 	spawn_grid(area_size)
 	
 func spawn_grid(area_size):
@@ -28,7 +28,7 @@ func spawn_grid(area_size):
 	var columns = int(area_size.x / cell_size)
 	var rows = int(area_size.y / cell_size)
 	
-	var start_pos = $ColorRect.global_position
+	var start_pos = $SpawnArea.global_position
 	
 	for x in range(columns):
 		for y in range(rows):
