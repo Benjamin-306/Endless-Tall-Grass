@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j6fy6xybktxd"
-path="res://.godot/imported/Monpok_03.png-f567f3d86d98489df3fb4c90b09e40fe.ctex"
+path="res://.godot/imported/monpok_03.png-25e6d7cae1436003447bdee5369a7f3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Monpok_03.png"
-dest_files=["res://.godot/imported/Monpok_03.png-f567f3d86d98489df3fb4c90b09e40fe.ctex"]
+source_file="res://Assets/Sprites/monpok_03.png"
+dest_files=["res://.godot/imported/monpok_03.png-25e6d7cae1436003447bdee5369a7f3c.ctex"]
 
 [params]
 
