@@ -46,7 +46,7 @@ Benjamin-306 + JustinCase-306
 
 > [!NOTE]
 > 
-> Version: 1.9.7
+> Version: 1.9.8
 >
 > Worktime: 43 hours
 >
