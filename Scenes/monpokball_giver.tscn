@@ -115,7 +115,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2bpf"]
-size = Vector2(34, 34)
+size = Vector2(16, 34)
 
 [node name="MonpokballGiver" type="Area2D" unique_id=1360828205]
 collision_layer = 0
