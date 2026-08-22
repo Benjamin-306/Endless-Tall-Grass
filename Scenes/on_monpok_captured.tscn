@@ -10,11 +10,19 @@ region = Rect2(16, 20, 16, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yps4j"]
 atlas = ExtResource("3_i4ija")
-region = Rect2(32, 20, 16, 8)
+region = Rect2(0, 36, 16, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_207ru"]
 atlas = ExtResource("3_i4ija")
 region = Rect2(0, 36, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iyac"]
+atlas = ExtResource("3_i4ija")
+region = Rect2(32, 20, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4ija"]
+atlas = ExtResource("3_i4ija")
+region = Rect2(32, 20, 16, 8)
 
 [node name="OnMonpokCaptured" type="CanvasLayer" unique_id=1182462886]
 script = ExtResource("1_i4ija")
@@ -51,6 +59,7 @@ action_mode = 0
 texture_normal = SubResource("AtlasTexture_hhfpc")
 texture_pressed = SubResource("AtlasTexture_yps4j")
 texture_hover = SubResource("AtlasTexture_207ru")
+texture_disabled = SubResource("AtlasTexture_6iyac")
 stretch_mode = 5
 
 [node name="Catch" type="Label" parent="Background/CatchButton" unique_id=91255784]
@@ -86,6 +95,7 @@ action_mode = 0
 texture_normal = SubResource("AtlasTexture_hhfpc")
 texture_pressed = SubResource("AtlasTexture_yps4j")
 texture_hover = SubResource("AtlasTexture_207ru")
+texture_disabled = SubResource("AtlasTexture_i4ija")
 stretch_mode = 5
 
 [node name="Escape" type="Label" parent="Background/EscapeButton" unique_id=2136111284]
