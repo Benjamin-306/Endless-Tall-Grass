@@ -154,12 +154,12 @@ action_up = &"move_up"
 action_right = &"move_right"
 action_down = &"move_down"
 
-[node name="MonpokballGiver" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
-position = Vector2(349, 30)
-
 [node name="StartAnim" parent="." unique_id=1327585273 instance=ExtResource("24_3pmx8")]
 
 [node name="TileMap" parent="." unique_id=1655362443 instance=ExtResource("12_6iyac")]
+
+[node name="Dropper" parent="." unique_id=1360828205 instance=ExtResource("16_k12tt")]
+position = Vector2(348, 32)
 
 [connection signal="pressed" from="GameManager/CanvasLayer/Control/TextureButton" to="GameManager" method="_on_touch_screen_button_pressed"]
 [connection signal="pressed" from="GameManager/CanvasLayer/Inventory/Control2/TextureButton" to="GameManager" method="_on_touch_screen_button_pressed"]
