@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://daigvy7a3x4jm"]
 
-[ext_resource type="Script" uid="uid://kby2icutldgx" path="res://Scenes/game_manager.gd" id="1_21xkr"]
+[ext_resource type="Script" uid="uid://kby2icutldgx" path="res://script/game_manager.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://c5laq2ns3o04k" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://bap6386e1jobk" path="res://Scenes/inventory.tscn" id="3_ee4r6"]
 [ext_resource type="Texture2D" uid="uid://ly6vhfvc74q8" path="res://Assets/Sprites/monpokball.png" id="3_h1bgf"]
@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dgnvp3ka8drhd" path="res://script/touch_buttons.gd" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://cmfshvvasmq6w" path="res://Scenes/monpokball_giver.tscn" id="16_k12tt"]
 [ext_resource type="Texture2D" uid="uid://dcovu0uc42dp3" path="res://Assets/Sprites/essential_spritesheet.png" id="21_ee4r6"]
-[ext_resource type="PackedScene" uid="uid://b1636uqslu58g" path="res://start_anim.tscn" id="24_3pmx8"]
+[ext_resource type="PackedScene" uid="uid://b1636uqslu58g" path="res://Scenes/start_anim.tscn" id="24_3pmx8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcma1"]
 atlas = ExtResource("21_ee4r6")
