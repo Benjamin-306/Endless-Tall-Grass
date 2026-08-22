@@ -2,6 +2,7 @@
 .godot/
 .import/
 *.import
+*.png.import
 export_presets.cfg
 debug.log
 
